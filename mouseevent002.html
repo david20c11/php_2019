@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Eventos del mouse en Canvas</title>
+    <style>
+        #d1{width: 200px;height:200px;border: 1px solid yellow;background-color: rgb(19, 8, 8);}
+    </style>
+</head>
+<body>
+    <div id='d1'></div>
+    <p id="demo"></p>
+    <p id="demo1"></p>
+    <script>
+        document.getElementById('d1').addEventListener('mousemove',function(event){
+            var x=event.clientX;
+            var y=event.clientY;
+            document.getElementById('demo').innerHTML='Pos:'+x+' , '+y+' Event: '+event.type;
+
+        });
+        document.getElementById('d1').addEventListener('click',function(event){
+            var x=event.clientX;
+            var y=event.clientY;
+            document.getElementById('demo1').innerHTML='Pos:'+x+' , '+y+' Event: '+event.type;
+
+        });
+    </script>
+</body>
+</html>
